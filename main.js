@@ -57,7 +57,7 @@ function openModal() {
                               </select>
                               <div id="selected"></div>
                           </form>
-                          <input type="button" value="submit">
+                          <input onclick="onFormSubmit()" type="button" value="submit">
   `;
 }
 
@@ -69,5 +69,8 @@ function createButton() {
   newBtn.appendChild(newContent);
   var currentDiv = document.getElementById("form");
   document.body.insertBefore(newBtn, currentDiv);
-  console.log("djflsadjflsadj");
+}
+function onFormSubmit() {
+  console.log("should work");
+  document.getElementById("dv").innerHTML = "";
 }
