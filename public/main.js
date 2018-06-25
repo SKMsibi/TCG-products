@@ -40,7 +40,8 @@ function openModal() {
   var currentDiv = document.getElementById("form");
   document.body.insertBefore(newBtn, currentDiv);
   var showForm = document.getElementById("dv");
-  showForm.innerHTML = `<form method="post" action="">
+  showForm.innerHTML = `<form method="post" action="http://localhost:3003/data" target=blank>
+
                               Name :
                               <input type="text" name="name" id="name" />
                               <br/> Last name:
@@ -56,8 +57,8 @@ function openModal() {
                                   <option value="telephone">Telephone</option>
                               </select>
                               <div id="selected"></div>
+                          <input onclick="onFormSubmit()" type="submit" value="submit">
                           </form>
-                          <input onclick="onFormSubmit()" type="button" value="submit">
   `;
 }
 
